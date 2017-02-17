@@ -106,7 +106,7 @@ wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.j
 
  4. This should create a webhook under GitHub repository, for example:
   
- ![WebHook Settings](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/images/Step4-WebHooksSettings.png "WebHook Settings")
+ ![WebHook Settings](docs/images/Step4-WebHooksSettings.png "WebHook Settings")
 
 ### Step 5: Create a Rule - RuleToTrackPullRequests
 
