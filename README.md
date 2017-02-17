@@ -19,7 +19,7 @@ Each of the actions in GitHub Slack Bot are implemented in JavaScript, using the
   * updated due to a new push in the branch that the pull request is tracking or
   * closed
 
-![Action: track pull requests invoked by GitHub repository](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/images/track-pull-requests.png "Track Pull Requests")
+![Action: track pull requests invoked by GitHub repository](docs/images/track-pull-requests.png "Track Pull Requests")
 
 ### Invoked twice a day by an Alarm trigger
 
@@ -29,17 +29,17 @@ The sequence of actions is invoked by Alarm trigger, which then starts a chain o
 
 * **Post to Slack** - an action invoked by _find delayed pull requests_ action. It takes a list delayed pull requests and composes message with pull requests, ID, label, and age in days to post on Slack.
 
-![Action Sequence](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/images/action-sequence.png "Action Sequence")
+![Action Sequence](docs/images/action-sequence.png "Action Sequence")
 
 Finally, here is the sample message posted on Slack showing list of delayed pull requrests from OpenWhisk repo. OpenWhisk project developers at IBM are using this bot to receive such notifications.
 
-![Pull Requests Notification](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
+![Pull Requests Notification](docs/images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
 
 ### Bringing it all together
 
 So to summarize, this is how all three actions are configured to post notifications on Slack:
 
-![Bringing it all together](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/images/bringing-all-together.png "Bringing it all together")
+![Bringing it all together](docs/images/bringing-all-together.png "Bringing it all together")
  
 ## Installation
 
@@ -49,7 +49,7 @@ If you would like to try this yourself, here are the detailed instructions to fo
 
 If you don't have one already, create a new Cloudant NoSQL database by following tutorial on [Creating a Cloudant instance on Bluemix](https://console.ng.bluemix.net/docs/services/Cloudant/tutorials/create_service.html#creating-a-cloudant-instance-on-bluemix) or [GitHub IBM Bluemix docs](https://github.com/IBM-Bluemix/docs/blob/master/services/Cloudant/tutorials/create_service.md).
 
-Also, [create a new database](https://github.ibm.com/pdesai/GitHubSlackBot/blob/master/docs/images/Step1-CreateANewDatabase.png) if you don't have one.
+Also, [create a new database](docs/images/Step1-CreateANewDatabase.png) if you don't have one.
 
 ### Step 2: Create Cloudant Package Binding - TrackPRsInCloudant
 
@@ -116,7 +116,7 @@ wsk rule create RuleToTrackPullRequests /<namespace>/GitHubWebHookTrigger /<name
 
 At this point, any new pull request update is being recorded in Cloudant database, for example:
 
-![Cloudant Database](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/images/Step5-PullRequestsInDatabase.png)
+![Cloudant Database](docs/images/Step5-PullRequestsInDatabase.png)
 
 ### Step 6: Create an Action - find-delayed-pull-requests
 
@@ -132,7 +132,7 @@ wsk action create find-delayed-pull-requests openwhisk/actions/js/find-delayed-p
 
 ### Step 7: Add Incoming Webhook to Slack
 
-Create a new incoming webhook by following step by step instructions from [here](https://github.ibm.com/pdesai/GitHubSlackFunctions/blob/master/docs/add-webhook-to-slack.md).
+Create a new incoming webhook by following step by step instructions from [here](docs/add-webhook-to-slack.md).
 
 ### Step 8: Create Slack Package Binding - PostPRToSlack
 
