@@ -20,11 +20,11 @@ Select **"Create document"** action:
 
 ![Create Document](images/Step2-CloudantPackageSelectAction.png)
 
-Select Cloudant instance we just created in previous step named **"GitHubSlackBotCloudant"** and database.
+Select Cloudant instance we just created in previous step named **"GitHubSlackBotCloudant"** and database you created.
 
 ![Coudant Package Binding](images/Step2-NewPackageBinding.png)
 
-It creates a new package **"GitHubSlackBotCloudant"** and you can view the details:
+It creates a new package **"TrackPRsInCloudant"** and you can view the details:
 
 ![Cloudant Package Binding Settings](images/Step2-PackageBindingSettings.png)
 
@@ -39,4 +39,26 @@ Creating an action here results in a track-pull-requests.js file with:
 Now, copy code from [track-pull-requests.js](../openwhisk/actions/js/track-pull-requests.js) and paste it here.
 
 ![Track Pull Requests](images/Step3-TrackPullRequests.png)
+
+## Step 4 - Create GitHub WebHook trigger - GitHubWebHookTrigger
+
+Create trigger using **"Automate this Action"** option and select **"GitHub WebHook"**:
+
+[GitHub WebHook](images/Step4-ConfigureInvocationFromFeed.png)
+
+Add a new trigger using **"New Trigger"**:
+
+[GitHub WebHook Feed](images/Step4-ConfigureInvocationFromFeedNewTrigger.png)
+
+Creating a new trigger takes following parameters:
+
+* Trigger Name: <name your trigger>
+* Your GitHub username: <github username>
+* accessToken: <access token>
+* GitHub Repository: <github repo name>
+* Events: pull-request
+
+
+
+
 
