@@ -1,4 +1,4 @@
 Credits
 -------
 
-Justin Berstler has helped openwhisk-GitHubSlackBot become what it is today.
+Justin Berstler and Priti Desai have helped openwhisk-GitHubSlackBot become what it is today.
