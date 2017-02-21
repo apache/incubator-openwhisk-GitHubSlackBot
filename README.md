@@ -91,20 +91,26 @@ wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.j
  ```bash
  cat github.json
  {
-  "username": "<username>",
-  "repository": "<repository>",
-  "accessToken": "<accessToken>"
+   "username": "<username>",
+   "repository": "<repository>",
+   "accessToken": "<accessToken>"
 }
  wsk package bind /whisk.system/github GitHubWebHook --param-file github.json
  ```
  
- 3. Create a WebHook trigger for the GitHub **pull-requests** by using <package_name>/webhook feed created in Step 2:
+ 3. Create a WebHook trigger for the GitHub **pull-request** by using <package_name>/webhook feed created in Step 2:
 
  ```bash
- wsk trigger create GitHubWebHookTrigger --feed GitHubWebHook/webhook --param events pull-requests
+ wsk trigger create GitHubWebHookTrigger --feed GitHubWebHook/webhook --param events pull-request
  ```
 
- 4. This should create a webhook under GitHub repository, for example:
+ 4. GitHub sends a "ping" to the new webhook as part of the webhook creation. This can be used to verify that the trigger is actually fired with:
+ 
+ ```bash
+ wsk activation list GitHubWebHookTrigger
+ ```
+ 
+ And creates a webhook under GitHub repository, for example:
   
  ![WebHook Settings](docs/images/Step4-WebHooksSettings.png "WebHook Settings")
 
