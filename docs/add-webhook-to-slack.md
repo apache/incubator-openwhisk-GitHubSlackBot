@@ -1,5 +1,7 @@
 # Add Incoming Webhook to Slack
 
+Here are the instructions to create a new webhook in Slack. This incoming webhook is needed for an OpenWhisk action to post messages to Slack.
+
 1. Under **"Apps & Integrations"**, search for **"Incoming Webhooks"**:
 
  ![Incoming WebHooks](images/Step7-IncomingWebhooks.png)
