@@ -221,7 +221,7 @@ function stopTracking(pullRequest, ifInState) {
         .then(function (existingDoc) {
             if (existingDoc) {
                 if (!ifInState || existingDoc.state === ifInState) {
-                    return wsk.invoke.actions({
+                    return wsk.actions.invoke({
                         actionName: packageName + "/delete-document",
                         params: {
                             docid: existingDoc._id,
