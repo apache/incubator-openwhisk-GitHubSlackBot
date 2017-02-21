@@ -176,13 +176,7 @@ wsk action invoke PostPRToSlack/post  --blocking --result --param text "Hello Wo
 ### Step 9: Create an Action - post-to-slack
 
 ```bash
-cat post-to-slack.json
-{
-  "slack_username": "<username>",
-  "slack_channel": "#<channel>",
-  "slack_package": "DemoPostPRToSlack"
-}
-wsk action create post-to-slack openwhisk/actions/js/post-to-slack.js --param-file post-to-slack.json
+wsk action create post-to-slack openwhisk/actions/js/post-to-slack.js --param slack_package PostPRToSlack
 ```
 
 ### Step 10: Create an Action Sequence - SequenceToPostGitHubPRsToSlack
