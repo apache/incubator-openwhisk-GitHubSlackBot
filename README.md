@@ -182,7 +182,7 @@ wsk action create post-to-slack openwhisk/actions/js/post-to-slack.js --param sl
 ### Step 10: Create an Action Sequence - SequenceToPostGitHubPRsToSlack
 
 ```bash
-wsk action create SequenceToPostGitHubPRsToSlack --sequence /<namespace>/find-delayed-pull-requests, /<namespace>/post-to-slack
+wsk action create SequenceToPostGitHubPRsToSlack --sequence /<namespace>/find-delayed-pull-requests,/<namespace>/post-to-slack
 ```
 
 ### Step 11: Create Alarm Trigger - Every12Hours
