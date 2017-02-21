@@ -135,8 +135,7 @@ function isStillOpen(prDoc) {
         .then(function (latest) {
             if (latest.state === "closed") {
                 console.log("PR#" + prDoc.pr.number + " is now closed, but still being tracked - deleting it from Cloudant.");
-                // delete from Cloudant - don"t bother waiting for result because,
-                // honestly, I don"t really care
+                // delete from Cloudant - don"t bother waiting for result
                 stopTracking(prDoc.pr);
                 return false;
             } else {
