@@ -135,6 +135,21 @@ cat find-delayed-pull-requests.json
 }
 wsk action create find-delayed-pull-requests openwhisk/actions/js/find-delayed-pull-requests.js --param-file find-delayed-pull-requests.json
 ```
+If you would like to verify action creation, you can run it with:
+
+```bash
+wsk action invoke find-delayed-pull-requests --blocking
+...
+    "response": {
+        "status": "success",
+        "statusCode": 0,
+        "success": true,
+        "result": {
+            "prs": []
+        }
+    },
+...    
+```
 
 ### Step 7: Add Incoming Webhook to Slack
 
