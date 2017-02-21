@@ -24,9 +24,7 @@
   * In this case, the params variable will look like:
   *     {
   *			"prs": "xxxx",
-  *			"slack_channel": "xxxx",
   *			"slack_package": "xxxx",
-  *			"slack_username": "xxxx"
   *		}
   *
   * @return which must be a JSON object.
@@ -43,9 +41,7 @@ function main(params) {
 
 	//read Params
     var prs = params.prs;
-	var slackChannel = params.slack_channel;
 	var slackPackage = params.slack_package;
-	var slackUsername = params.slack_username;
 
 	if (prs.length === 0) {
 		return {
@@ -86,8 +82,6 @@ function main(params) {
     	actionName: packageName + "/post",
         params: {
             "text": messages.join("\n"),
-            "channel": slackChannel,
-            "username": slackUsername
         },
         blocking: true
     })
