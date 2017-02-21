@@ -78,8 +78,8 @@ wsk action invoke TrackPRsInCloudant/list-documents --blocking
 ### Step 3: Create an Action - track-pull-requests
 
 ```bash
-git clone git@github.ibm.com:pdesai/GitHubSlackBot.git
-cd GitHubSlackBot
+git clone git@github.com:openwhisk/openwhisk-GitHubSlackBot.git
+cd openwhisk-GitHubSlackBot
 wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.js --param cloudant_package TrackPRsInCloudant
 ```
 
