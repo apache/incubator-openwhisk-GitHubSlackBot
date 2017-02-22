@@ -66,6 +66,11 @@ GitHub WebHook trigger adds a new webhook to GitHub repo:
 
 ## Step 5 - Create a Rule - RuleToTrackPullRequests
 
+Now, create a rule so that **"track-pull-requests"** can be invoked by GitHub WebHook trigger **"GitHubWebHookTrigger"**.
+
+![RuleToTrackPullRequests](images/Step5-SaveRule.png)
+
+
 ## Step 6: Create an Action - find-delayed-pull-requests
 
 ## Step 7: Add Incoming Webhook to Slack
