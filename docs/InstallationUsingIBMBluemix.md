@@ -58,6 +58,10 @@ Creating a new trigger takes following parameters:
 * GitHub Repository: <github repo name>
 * Events: pull-request
 
+![GitHub WebHook Feed](images/Step4-GitHubWebHookTrigger.png)
+
+
+
 
 
 
