@@ -32,7 +32,7 @@ It creates a new package **"TrackPRsInCloudant"** and you can view the details:
 
 ![Track Pull Requests](images/Step3-CreateAnAction.png)
 
-Creating an action here results in a track-pull-requests.js file with:
+Creating an action here results in a **track-pull-requests.js** file with:
 
 ![Track Pull Requests](images/Step3-CreateAnActionEdit.png)
 
@@ -42,11 +42,11 @@ Now, copy code from [track-pull-requests.js](../openwhisk/actions/js/track-pull-
 
 ## Step 4 - Create GitHub WebHook trigger - GitHubWebHookTrigger
 
-Create trigger using **"Automate this Action"** option and select **"GitHub WebHook"**:
+1. Create trigger using **"Automate this Action"** option and select **"GitHub WebHook"**:
 
 [GitHub WebHook](images/Step4-ConfigureInvocationFromFeed.png)
 
-Add a new trigger using **"New Trigger"**:
+2. Add a new trigger using **"New Trigger"**:
 
 [GitHub WebHook Feed](images/Step4-ConfigureInvocationFromFeedNewTrigger.png)
 
