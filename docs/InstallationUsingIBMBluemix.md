@@ -44,11 +44,11 @@ Now, copy code from [track-pull-requests.js](../openwhisk/actions/js/track-pull-
 
 1. Create trigger using **"Automate this Action"** option and select **"GitHub WebHook"**:
 
-[GitHub WebHook](images/Step4-ConfigureInvocationFromFeed.png)
+![GitHub WebHook](images/Step4-ConfigureInvocationFromFeed.png)
 
 2. Add a new trigger using **"New Trigger"**:
 
-[GitHub WebHook Feed](images/Step4-ConfigureInvocationFromFeedNewTrigger.png)
+![GitHub WebHook Feed](images/Step4-ConfigureInvocationFromFeedNewTrigger.png)
 
 Creating a new trigger takes following parameters:
 
