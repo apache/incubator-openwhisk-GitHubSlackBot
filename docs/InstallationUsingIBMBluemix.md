@@ -42,11 +42,11 @@ Now, copy code from [track-pull-requests.js](../openwhisk/actions/js/track-pull-
 
 ## Step 4 - Create GitHub WebHook trigger - GitHubWebHookTrigger
 
-1. Create trigger using **"Automate this Action"** option and select **"GitHub WebHook"**:
+Create trigger using **"Automate this Action"** option and select **"GitHub WebHook"**:
 
 ![GitHub WebHook](images/Step4-ConfigureInvocationFromFeed.png)
 
-2. Add a new trigger using **"New Trigger"**:
+Add a new trigger using **"New Trigger"**:
 
 ![GitHub WebHook Feed](images/Step4-ConfigureInvocationFromFeedNewTrigger.png)
 
@@ -64,9 +64,20 @@ GitHub WebHook trigger adds a new webhook to GitHub repo:
 
 ![GitHub WebHook Settings](images/Step4-WebHookSettings.png)
 
+## Step 5 - Create a Rule - RuleToTrackPullRequests
 
+## Step 6: Create an Action - find-delayed-pull-requests
 
+## Step 7: Add Incoming Webhook to Slack
 
+## Step 8: Create Slack Package Binding - PostPRToSlack
 
+## Step 9: Create an Action - post-to-slack
+
+## Step 10: Create an Action Sequence - SequenceToPostGitHubPRsToSlack
+
+## Step 11: Create Alarm Trigger - Every12Hours
+
+## Step 12: Create a Rule - RuleToPostGitHubPRsToSlack
 
 
