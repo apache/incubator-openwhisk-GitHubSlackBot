@@ -117,7 +117,8 @@ wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.j
 ### Step 5: Create a Rule - RuleToTrackPullRequests
 
 ```bash
-wsk rule create RuleToTrackPullRequests /<namespace>/GitHubWebHookTrigger /<namespace>/track-pull-requests
+export OPENWHISK_NAMESPACE=`wsk property get --namespace | awk '{printf("%s", $3)}'`
+wsk rule create RuleToTrackPullRequests /$OPENWHISK_NAMESPACE/GitHubWebHookTrigger /$OPENWHISK_NAMESPACE/track-pull-requests
 ```
 
 At this point, any new pull request update is being recorded in Cloudant database, for example:
@@ -182,7 +183,7 @@ wsk action create post-to-slack openwhisk/actions/js/post-to-slack.js --param sl
 ### Step 10: Create an Action Sequence - SequenceToPostGitHubPRsToSlack
 
 ```bash
-wsk action create SequenceToPostGitHubPRsToSlack --sequence /<namespace>/find-delayed-pull-requests,/<namespace>/post-to-slack
+wsk action create SequenceToPostGitHubPRsToSlack --sequence /$OPENWHISK_NAMESPACE/find-delayed-pull-requests,/$OPENWHISK_NAMESPACE/post-to-slack
 ```
 
 ### Step 11: Create Alarm Trigger - Every12Hours
@@ -194,5 +195,5 @@ wsk trigger create Every12Hours --feed /whisk.system/alarms/alarm --param cron "
 ### Step 12: Create a Rule - RuleToPostGitHubPRsToSlack
 
 ```bash
-wsk rule create RuleToPostGitHubPRsToSlack /<namespace>/Every12Hours /<namespace>/SequenceToPostGitHubPRsToSlack
+wsk rule create RuleToPostGitHubPRsToSlack /$OPENWHISK_NAMESPACE/Every12Hours /$OPENWHISK_NAMESPACE/SequenceToPostGitHubPRsToSlack
 ```
