@@ -53,12 +53,16 @@ Now, copy code from [track-pull-requests.js](../openwhisk/actions/js/track-pull-
 Creating a new trigger takes following parameters:
 
 * Trigger Name: Name Your Trigger
-* Your GitHub username: GitHub Username>
+* Your GitHub username: GitHub Username
 * accessToken: Access Token
 * GitHub Repository: GitHub Repo Name
 * Events: pull-request
 
 ![GitHub WebHook Feed](images/Step4-GitHubWebHookTrigger.png)
+
+GitHub WebHook trigger adds a new webhook to GitHub repo:
+
+![GitHub WebHook Settings](images/Step4-WebHookSettings.png)
 
 
 
