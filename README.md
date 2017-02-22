@@ -170,7 +170,7 @@ wsk package bind /whisk.system/slack PostPRToSlack --param-file slack.json
 You can verify by posting a sample message to your Slack channel:
 
 ```bash
-wsk action invoke PostPRToSlack/post  --blocking --result --param text "Hello World!"
+wsk action invoke PostPRToSlack/post  --blocking --result --param text "Hello World"
 ```
 
 ### Step 9: Create an Action - post-to-slack
