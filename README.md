@@ -45,6 +45,22 @@ So to summarize, this is how all three actions are configured to post notificati
 
 If you would like to try this yourself, here are the detailed instructions to follow. You will need an account on [IBM Bluemix](https://console.ng.bluemix.net).
 
+### Prerequisite
+
+* Setup OpenWhisk CLI
+
+Follow the [instructions](https://console.ng.bluemix.net/openwhisk/learn/cli) on IBM Bluemix to setup OpenWhisk CLI. Set your API host and auth key with:
+
+```bash
+wsk property set --apihost openwhisk.ng.bluemix.net --auth <user>:<pass>
+```
+* Clone this repo:
+
+```bash
+git clone git@github.com:openwhisk/openwhisk-GitHubSlackBot.git
+cd openwhisk-GitHubSlackBot
+```
+
 ### Step 1: Create Cloudant Service
 
 If you don't have one already, create a new Cloudant NoSQL database by following tutorial on [Creating a Cloudant instance on Bluemix](https://console.ng.bluemix.net/docs/services/Cloudant/tutorials/create_service.html#creating-a-cloudant-instance-on-bluemix) or [GitHub IBM Bluemix docs](https://github.com/IBM-Bluemix/docs/blob/master/services/Cloudant/tutorials/create_service.md).
@@ -78,8 +94,6 @@ wsk action invoke TrackPRsInCloudant/list-documents --blocking
 ### Step 3: Create an Action - track-pull-requests
 
 ```bash
-git clone git@github.com:openwhisk/openwhisk-GitHubSlackBot.git
-cd openwhisk-GitHubSlackBot
 wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.js --param cloudant_package TrackPRsInCloudant
 ```
 
