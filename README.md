@@ -60,6 +60,11 @@ wsk property set --apihost openwhisk.ng.bluemix.net --auth <user>:<pass>
 git clone git@github.com:openwhisk/openwhisk-GitHubSlackBot.git
 cd openwhisk-GitHubSlackBot
 ```
+* Export namespace
+
+```bash
+export OPENWHISK_NAMESPACE=`wsk property get --namespace | awk '{printf("%s", $3)}'`
+```
 
 ### Step 1: Create Cloudant Service
 
@@ -131,7 +136,6 @@ wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.j
 ### Step 5: Create a Rule - RuleToTrackPullRequests
 
 ```bash
-export OPENWHISK_NAMESPACE=`wsk property get --namespace | awk '{printf("%s", $3)}'`
 wsk rule create RuleToTrackPullRequests /$OPENWHISK_NAMESPACE/GitHubWebHookTrigger /$OPENWHISK_NAMESPACE/track-pull-requests
 ```
 
@@ -210,4 +214,10 @@ wsk trigger create Every12Hours --feed /whisk.system/alarms/alarm --param cron "
 
 ```bash
 wsk rule create RuleToPostGitHubPRsToSlack /$OPENWHISK_NAMESPACE/Every12Hours /$OPENWHISK_NAMESPACE/SequenceToPostGitHubPRsToSlack
+```
+
+You can fire alarm trigger to verify:
+
+```bash
+wsk trigger fire /$OPENWHISK_NAMESPACE/Every12Hours
 ```
