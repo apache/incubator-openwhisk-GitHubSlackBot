@@ -98,7 +98,7 @@ wsk action create track-pull-requests openwhisk/actions/js/track-pull-requests.j
  wsk package bind /whisk.system/github GitHubWebHook --param-file github.json
  ```
  
- 3. Create a WebHook trigger for the GitHub **pull-request** by using <package_name>/webhook feed created in Step 2:
+ 3. Create a WebHook trigger for the GitHub **pull-request** by using PACKAGE/webhook feed created in Step 2:
 
  ```bash
  wsk trigger create GitHubWebHookTrigger --feed GitHubWebHook/webhook --param events pull-request
