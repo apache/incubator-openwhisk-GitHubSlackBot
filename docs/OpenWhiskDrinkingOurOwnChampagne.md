@@ -6,7 +6,7 @@ OpenWhisk project developers are using the actual running OpenWhisk code itself 
 
 Here is a sample of notification received on Slack:
 
-![Pull Requests Notification](images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
+![Pull Requests Notification](https://github.com/openwhisk/openwhisk-GitHubSlackBot/docs/images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
 
 ## Architecture
 
@@ -23,7 +23,7 @@ Each of the actions in GitHub Slack Bot are implemented in JavaScript, using the
   * updated due to a new push in the branch that the pull request is tracking or
   * closed
 
-![Action: track pull requests invoked by GitHub repository](images/track-pull-requests.png "Track Pull Requests")
+![Action: track pull requests invoked by GitHub repository](https://github.com/openwhisk/openwhisk-GitHubSlackBot/docs/images/track-pull-requests.png "Track Pull Requests")
 
 ### Invoked twice a day by an Alarm trigger
 
@@ -33,11 +33,11 @@ The sequence of actions is invoked by Alarm trigger, which then starts a chain o
 
 * **Post to Slack** - an action invoked by _find delayed pull requests_ action. It takes a list delayed pull requests and composes message with pull requests, ID, label, and age in days to post on Slack.
 
-![Action Sequence](images/action-sequence.png "Action Sequence")
+![Action Sequence](https://github.com/openwhisk/openwhisk-GitHubSlackBot/docs/images/action-sequence.png "Action Sequence")
 
 Here is the high-level workflow diagram:
 
-![OpenWhisk Workflow Diagram](images/WorkflowDiagram.png)
+![OpenWhisk Workflow Diagram](https://github.com/pritidesai/openwhisk-GitHubSlackBot/docs/images/WorkflowDiagram.png)
 
 If you would like to try this yourself, you can find the step-by-step installation instructions [here](https://github.com/openwhisk/openwhisk-GitHubSlackBot#installation) and demo [here](https://youtu.be/vEpuxcpOaEA).
 
