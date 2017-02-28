@@ -33,7 +33,7 @@ The sequence of actions is invoked by Alarm trigger, which then starts a chain o
 
 * **Post to Slack** - an action invoked by _find delayed pull requests_ action. It takes a list delayed pull requests and composes message with pull requests, ID, label, and age in days to post on Slack.
 
-![Action Sequence](https://github.com/openwhisk/openwhisk-GitHubSlackBot/tree/master/docs/images/action-sequence.png "Action Sequence")
+![Action Sequence](https://github.com/openwhisk/openwhisk-GitHubSlackBot/blob/master/docs/images/action-sequence.png "Action Sequence")
 
 Here is the high-level workflow diagram:
 
