@@ -6,7 +6,7 @@ OpenWhisk project developers are using the actual running OpenWhisk code itself 
 
 Here is a sample of notification received on Slack:
 
-![Pull Requests Notification](https://github.com/openwhisk/openwhisk-GitHubSlackBot/tree/master/docs/images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
+![Pull Requests Notification](https://github.com/openwhisk/openwhisk-GitHubSlackBot/blob/master/docs/images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
 
 ## Architecture
 
