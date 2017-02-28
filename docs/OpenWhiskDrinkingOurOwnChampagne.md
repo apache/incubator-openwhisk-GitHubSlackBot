@@ -37,7 +37,7 @@ The sequence of actions is invoked by Alarm trigger, which then starts a chain o
 
 Here is the high-level workflow diagram:
 
-![OpenWhisk Workflow Diagram](images/OpenWhiskDrinkingOurOwnChampagneWorkflowDiagram.png)
+![OpenWhisk Workflow Diagram](images/WorkflowDiagram.png)
 
 If you would like to try this yourself, you can find the step-by-step installation instructions [here](https://github.com/openwhisk/openwhisk-GitHubSlackBot#installation) and demo [here](https://youtu.be/vEpuxcpOaEA).
 
