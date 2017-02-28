@@ -23,7 +23,7 @@ Each of the actions in GitHub Slack Bot are implemented in JavaScript, using the
   * updated due to a new push in the branch that the pull request is tracking or
   * closed
 
-![Action: track pull requests invoked by GitHub repository](https://github.com/openwhisk/openwhisk-GitHubSlackBot/tree/master/docs/images/track-pull-requests.png "Track Pull Requests")
+![Action: track pull requests invoked by GitHub repository](https://github.com/openwhisk/openwhisk-GitHubSlackBot/blob/master/docs/images/track-pull-requests.png "Track Pull Requests")
 
 ### Invoked twice a day by an Alarm trigger
 
