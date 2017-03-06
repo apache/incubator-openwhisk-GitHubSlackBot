@@ -1,10 +1,8 @@
 # OpenWhisk – Drinking Our Own Champagne
 
-OpenWhisk is an Apache incubator project that provides an open source serverless platform. Its source code is available at https://github.com/openwhisk/openwhisk. 
+OpenWhisk is an Apache incubator project that provides an open source serverless platform. Its source code is available in [GitHub](https://github.com/openwhisk/openwhisk). 
 
-OpenWhisk project developers are using the actual running OpenWhisk code itself to improve its own Continuous Development and Integration (CD/CI) processes. This blog introduces a bot [openwhisk-GitHubSlackBot](https://github.com/openwhisk/openwhisk-GitHubSlackBot) which is designed to post updates to Slack when a GitHub Pull Request is ready for merge or a list of pull requests are under review for certain days and haven’t merged. GitHubSlackBot is designed and built using OpenWhisk actions(functions).  This is the first blog in a series, we will look at how the project developers are using OpenWhisk to get notifications when their builds are complete through [Travis](https://travis-ci.org/openwhisk) in next blog post.
-
-Here is a sample of notification received on Slack:
+OpenWhisk project developers are using the actual running OpenWhisk code itself to improve its own Continuous Development and Integration (CD/CI) processes. This blog post introduces a bot [openwhisk-GitHubSlackBot](https://github.com/openwhisk/openwhisk-GitHubSlackBot) which is designed to post updates to Slack when a GitHub Pull Request is ready for merge or a list of pull requests are under review for certain days and haven’t merged. Here is a sample of notification received on Slack:
 
 ![Pull Requests Notification](https://github.com/openwhisk/openwhisk-GitHubSlackBot/blob/master/docs/images/slack-pr-review-messages.jpg "Delayed Pull Requests Notification")
 
@@ -39,6 +37,6 @@ Here is the high-level workflow diagram:
 
 ![OpenWhisk Workflow Diagram](https://github.com/openwhisk/openwhisk-GitHubSlackBot/blob/master/docs/images/WorkflowDiagram.png)
 
-If you would like to try this yourself, you can find the step-by-step installation instructions [here](https://github.com/openwhisk/openwhisk-GitHubSlackBot#installation) and demo [here](https://youtu.be/vEpuxcpOaEA).
+You can try this yourself by following step-by-step installation instructions on [GitHub](https://github.com/openwhisk/openwhisk-GitHubSlackBot#installation) or by following live demo on [YouTube](https://youtu.be/vEpuxcpOaEA). Enjoy!
 
-Enjoy!!!
+Note that this is the first blog in a series, we will look at how the project developers are using OpenWhisk to get notifications when their builds are complete through [Travis]((https://travis-ci.org/openwhisk)) in next blog post.
